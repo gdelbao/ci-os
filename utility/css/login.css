@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/03/2015, 11:28:55
+    Author     : GABRIEL
+*/
+
+body{
+    /*background-color: rgba(0,0,0,0.1);*/
+}
+
+h1{
+    text-align: center;
+    margin-top: 80px;
+}
+
+form{
+    width: 300px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
+    padding: 30px;
+    margin: 10px auto;
+}
+
+label{
+    
+}
+
+input[type="text"],[type="password"]{
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 290px;
+    height: 20px;
+}
+
+input[type="text"]:focus,[type="password"]:focus{
+    border: 1px solid #990000;
+}
+
+input[type="submit"]{
+    margin-left: 65px;
+}
+
+input[type="submit"],[type="reset"]{
+    margin-top: 7px;
+    margin-bottom: 5px;
+    width: 80px;
+    border-style: solid;
+    border-color: #999999;
+    background-color: #ffffff;
+}
+
+input[type="submit"]:hover,[type="reset"]:hover{
+    border-color: #000000;
+}
+
+footer{
+    text-align: center;
+    margin-top: 100px;
+}
