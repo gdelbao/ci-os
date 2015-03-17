@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Login::CI</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('utility/css/login.css') ?>"
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('utility/css/login.css') ?>"/>
     </head>
     <body>
         <h1>Login de Usuário</h1>
