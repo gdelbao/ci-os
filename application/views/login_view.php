@@ -8,6 +8,11 @@
     <body>
         <h1>Login de Usuário</h1>
             <?php
+            $erro = $loginerror;
+            if ($erro == TRUE){
+                echo "<p>Login ou Senha Incorretos</p>";
+            }
+           
             echo form_open('login/valida');
             echo validation_errors('<p>','</p>')
             ?>

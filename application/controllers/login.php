@@ -2,6 +2,8 @@
 
     class Login extends CI_Controller{
         
+        
+        
         public function __construct() {
             parent::__construct();
             $this->load->helper('url');
@@ -11,7 +13,8 @@
         }
         
         public function index(){
-            $this->load->view('login_view');
+            $error['loginerror'] = FALSE;
+            $this->load->view('login_view', $error);
         }
         
         public function valida(){
@@ -36,8 +39,13 @@
                         );
                         $this->session->set_userdata('logged_in', $sess_array);
                     }
+                    redirect('home', 'refresh');
+                } else {
+                    //TODO retornar caso de erro
+                    $error['loginerror'] = TRUE;
+                    $this->load->view('login_view', $error);
                 }
-                redirect('home', 'refresh');
+                
             } else {
                 $this->load->view('login_view');
             }
