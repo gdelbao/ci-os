@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Área Privada</title>
+        <title>Página Inicial</title>
         <link rel="stylesheet" href="<?php echo base_url('utility/css/home.css') ?>"/>
     </head>
     <body>
@@ -22,7 +22,7 @@
         
         <div id="conteudo">    
         <h1>home</h1>
-        <h2>Bem Vindo <?php echo $username; ?></h2>
+        <h2>Seja Bem Vindo <?php echo $username; ?>!</h2>
         
         <a href="home/logout">Logout</a>
         
