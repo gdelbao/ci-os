@@ -14,7 +14,7 @@
             }
            
             echo form_open('login/valida');
-            echo validation_errors('<p>','</p>')
+            echo validation_errors('<p>','</p>');
             ?>
             <label for="txtLogin">Login</label>
             <input type="text" name="txtLogin"/>
