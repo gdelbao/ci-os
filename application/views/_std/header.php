@@ -9,8 +9,8 @@
     <body>
         <div id="container">
             <header>
-                <nav id="menu">
-                    <ul>
+                <nav id="menu-principal">
+                    <ul id="menu">
                         <li><a href="home">HOME</a></li>
                         <li><a href="#">CADASTROS</a>
                             <ul>
@@ -23,5 +23,6 @@
                 
                 <div id="dadosUser">
                 <p>Seja Bem Vindo <?php echo $username; ?></p>
+                <a href="home/logout">Logout</a>
                 </div>
             </header>

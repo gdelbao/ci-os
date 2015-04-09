@@ -2,6 +2,9 @@
     Created on : 17/03/2015, 09:58:09
     Author     : GABRIEL DELBÃO DE OLIVEIRA
 */
+*{
+    margin: 0; padding: 0;
+}
 
 body {
 /*    margin: 0;
@@ -12,50 +15,74 @@ body {
 #container {
     position: relative;
     background-color: #ffffff;
-    width: 800px;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/*Formatação do Header*/
+/*=====Formatação do Header=====*/
 
-/*Formatação do Menu*/
-#menu ul{
+/*=====Formatação do Menu=====*/
+#menu{
     list-style: none;
+    border:1px solid #c0c0c0;
+    float:left;
+    margin-left: 50px;
+}
+#menu li{
+    position:relative;
+    float: left;
+    border-right:1px solid #c0c0c0;
+}
+#menu li a{
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+#menu li a:hover{
+    background: #333;
+    color: #fff;
+    box-shadow: 0 3px 10px 0 #CCC;
+    text-shadow: 0px 0px 5px #fff;
+}
+#menu li ul{
     position: absolute;
-    
+    left: 0;
+    background-color: #fff;
+    display: none;
+}
+#menu li:hover ul{
+    display: block;
+}
+#menu li ul li{
+    border: 1px solid #c0c0c0;
+    display:block;
+    width:150px;
 }
 
-#menu a{
+
+/*=====Formatação dos Dados do Usuário=====*/
+#dadosUser{
+    text-align: right;
+}
+#dadosUser p{
+    color: red;
+}
+#dadosUser a{
     text-decoration: none;
 }
 
-#menu li{
-    display: inline-block;
-    border: 1px solid rgba(0,0,0,0.8);
-    width: 110px;
-    text-align: center;
-}
-
-#menu ul ul li{
-    position: relative;
-    display: none;
-}
-
-#menu ul li:hover li{
-    display: block;
-}
-/*Formatação dos Dados do Usuário*/
-#dadosUser{
-    /*position: relative;*/
-}
-#dadosUser p{
-    /*float: right;*/
-}
-
-/*Formatação do Conteúdo*/
+/*=====Formatação do Conteúdo=====*/
 #conteudo {
     margin-top: 50px;
 }
 
 /*Formatação do Footer*/
+footer{
+background-color: #c0c0c0;
+}
+footer p{
+    text-align: center;
+    margin-top: 20px;
+}

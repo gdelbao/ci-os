@@ -1,8 +1,11 @@
 <div id="conteudo">    
-<?php
-//    echo form_open('login/valida');
-//    echo validation_errors('<p>','</p>');
+    <h1>Cadastro de Usuários</h1>
+    incluir menu com Adicionar Usuário
+    <br>
+    <?php
+    //TODO: Tabela para mostrar Cadastros
+    $this->table->set_heading('ID','NOME','LOGIN');
+    $this->table->add_row('1', 'Gabriel', 'admin');
+    echo $this->table->generate();
     ?>
-<h1>Usuário List</h1>
-<a href="home/logout">Logout</a>
 </div>
