@@ -10,6 +10,7 @@ body {
 }
 
 #container {
+    position: relative;
     background-color: #ffffff;
     width: 800px;
     margin-left: auto;
@@ -17,23 +18,40 @@ body {
 }
 
 /*Formatação do Header*/
-.dadosUser {
-    position: relative;
-    float: right;
-    margin-top: -75px;
-    padding: 5px;
-}
-p.dadosUser{
-    color:red;  
-}
-a.dadosUser{
-    text-decoration: none;
-    margin-right: 10px;
-}
-
 
 /*Formatação do Menu*/
+#menu ul{
+    list-style: none;
+    position: absolute;
+    
+}
 
+#menu a{
+    text-decoration: none;
+}
+
+#menu li{
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.8);
+    width: 110px;
+    text-align: center;
+}
+
+#menu ul ul li{
+    position: relative;
+    display: none;
+}
+
+#menu ul li:hover li{
+    display: block;
+}
+/*Formatação dos Dados do Usuário*/
+#dadosUser{
+    /*position: relative;*/
+}
+#dadosUser p{
+    /*float: right;*/
+}
 
 /*Formatação do Conteúdo*/
 #conteudo {

@@ -13,7 +13,7 @@ class Usuario extends CI_Controller{
         $session_data = $this->session->userdata('logged_in');
         $dados = array(
             'titulo_pagina' => 'Usuários',
-            'page' => 'usuario_index',
+            'page' => 'usuario_list',
             'username' => $session_data['username']
         );
         $this->load->view('usuario_view',$dados);

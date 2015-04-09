@@ -21,7 +21,7 @@
                     </ul>
                 </nav>
                 
-                <p class="dadosUser">Seja Bem Vindo <?php echo $username; ?></p>
-                <br>
-                <a href="home/logout" class="dadosUser">Logout</a>
+                <div id="dadosUser">
+                <p>Seja Bem Vindo <?php echo $username; ?></p>
+                </div>
             </header>
