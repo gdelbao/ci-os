@@ -78,6 +78,28 @@ body {
     margin-top: 50px;
 }
 
+h1{
+    text-align: center;
+}
+
+/*Formatação Tabela*/
+table{
+    margin: 0 auto;
+}
+table, th, td{
+    border: 1px solid #ccc;
+}
+
+th, td{
+    padding: 5px;
+}
+
+
+/*Formatação do Form*/
+input{
+    display: block;
+}
+
 /*Formatação do Footer*/
 footer{
 background-color: #c0c0c0;
