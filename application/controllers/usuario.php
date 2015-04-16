@@ -4,6 +4,8 @@ class Usuario extends CI_Controller{
     public function __construct() {
         parent::__construct();
         $this->load->helper('url');
+        $this->load->helper('form');
+        $this->load->helper('array');
         $this->load->library('form_validation');
         $this->load->library('table');
         $this->load->model('usuario_model');
@@ -22,6 +24,22 @@ class Usuario extends CI_Controller{
     }
 
     public function novo(){
+        //Validação do Formulário
+        $this->form_validation->set_rules('nome', 'NOME', 'trim|required');
+        $this->form_validation->set_message('is_unique','Já existe um %s cadastrado no Banco');
+        $this->form_validation->set_rules('email', 'E-MAIL', 'trim|required|valid_email|is_unique[usuario.email]');
+        $this->form_validation->set_rules('usuario', 'USUARIO', 'trim|required');
+        $this->form_validation->set_rules('senha', 'SENHA', 'trim|required');
+        $this->form_validation->set_message('matches','O campo %s está diferente do campo %s');
+        $this->form_validation->set_rules('txtSenha2', 'REPETE SENHA', 'trim|required|matches[senha]');
+        
+        if ($this->form_validation->run()==TRUE){
+            $data = elements(array('nome', 'email', 'usuario', 'senha'), $this->input->post());
+            $data['senha'] = md5($data['senha']);
+            $this->usuario_model->insert($data);
+        }
+        
+        
         $session_data = $this->session->userdata('logged_in');
         $dados = array(
             'titulo_pagina' => 'Adicionar Usuários',
