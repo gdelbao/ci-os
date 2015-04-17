@@ -48,6 +48,32 @@ class Usuario extends CI_Controller{
         );
         $this->load->view('usuario_view',$dados);
     }
+    
+    public function editar(){
+        //Validação do Formulário
+        $this->form_validation->set_rules('nome', 'NOME', 'trim|required');
+        //$this->form_validation->set_message('is_unique','Já existe um %s cadastrado no Banco');
+        $this->form_validation->set_rules('email', 'E-MAIL', 'trim|required|valid_email|');
+        $this->form_validation->set_rules('usuario', 'USUARIO', 'trim|required');
+        $this->form_validation->set_rules('senha', 'SENHA', 'trim|required');
+        $this->form_validation->set_message('matches','O campo %s está diferente do campo %s');
+        $this->form_validation->set_rules('senha2', 'REPETE SENHA', 'trim|required|matches[senha]');
+        
+        if ($this->form_validation->run()==TRUE){
+            $data = elements(array('nome', 'email', 'usuario', 'senha'), $this->input->post());
+            $data['senha'] = md5($data['senha']);
+            $this->usuario_model->update($data, array('id'=>$this->input->post('id')));
+        }
+        
+        
+        $session_data = $this->session->userdata('logged_in');
+        $dados = array(
+            'titulo_pagina' => 'Editar Usuários',
+            'page' => 'usuario_edit',
+            'username' => $session_data['username']
+        );
+        $this->load->view('usuario_view',$dados);
+    }
 }
 
 ?>
