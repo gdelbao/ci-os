@@ -74,6 +74,20 @@ class Usuario extends CI_Controller{
         );
         $this->load->view('usuario_view',$dados);
     }
+    
+    public function excluir(){
+        if($this->input->post('idUsuario')>0){
+            $this->usuario_model->delete(array('id'=>$this->input->post('idUsuario')));
+        }
+        
+        $session_data = $this->session->userdata('logged_in');
+        $dados = array(
+            'titulo_pagina' => 'Editar Usuários',
+            'page' => 'usuario_delete',
+            'username' => $session_data['username']
+        );
+        $this->load->view('usuario_view',$dados);
+    }
 }
 
 ?>

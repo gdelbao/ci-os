@@ -22,8 +22,20 @@
             }
         }
         
-        public function update(){
-            
+        public function update($dados=NULL, $condicao=NULL){
+            if($dados != NULL && $condicao != NULL){
+                $this->db->update('usuario', $dados, $condicao);
+                $this->session->set_flashdata('update-ok', 'Usuário Alterado com Sucesso!');
+                redirect(current_url());
+            }
+        }
+        
+        public function delete($condicao=NULL){
+            if($condicao != NULL){
+                $this->db->delete('usuario', $condicao);
+                $this->session->flashdata('delete-ok', 'Usuário Excluido com Sucesso!');
+                redirect('usuario');
+            }
         }
 
     }

@@ -14,8 +14,8 @@
     echo form_open("usuario/editar/$iduser");
     echo validation_errors('<p>','</p>');
     
-    if ($this->session->flashdata('add-ok')){
-        echo '<p>'.$this->session->flashdata('add-ok').'</p>';
+    if ($this->session->flashdata('update-ok')){
+        echo '<p>'.$this->session->flashdata('update-ok').'</p>';
     }
     ?>
     <label for="id">ID</label>
