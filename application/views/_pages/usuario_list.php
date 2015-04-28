@@ -10,7 +10,7 @@
     
     $this->table->set_heading('ID','NOME','LOGIN', 'AÇÕES');
     foreach ($dbdata as $row) {
-    	$this->table->add_row($row->id, $row->nome, $row->usuario, anchor("usuario/editar/$row->id", 'EDITAR').' - '.anchor("usuario/excluir/$row->id", 'EXCLUIR'));
+        $this->table->add_row($row->id, $row->nome, $row->usuario, anchor("usuario/editar/$row->id", 'EDITAR').' - '.anchor("usuario/excluir/$row->id", 'EXCLUIR'));
     }
     
     echo $this->table->generate();
