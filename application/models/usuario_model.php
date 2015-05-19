@@ -33,7 +33,7 @@
         public function delete($condicao=NULL){
             if($condicao != NULL){
                 $this->db->delete('usuario', $condicao);
-                $this->session->flashdata('delete-ok', 'Usuário Excluido com Sucesso!');
+                $this->session->set_flashdata('delete-ok', 'Usuário Excluido com Sucesso!');
                 redirect('usuario');
             }
         }
